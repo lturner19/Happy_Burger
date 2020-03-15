@@ -1,9 +1,12 @@
+//Code below is establishing connection to mySQL database
+
 // Set up MySQL connection.
 var mysql = require("mysql");
+//environments folder (can be used to hold password, remember to add to .gitignore)
 require('dotenv').config()
 var connection;
 
-//connect to heroku database
+//connect to heroku database (JAWSDB_URL = name established by Heroku)
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -13,10 +16,10 @@ if (process.env.JAWSDB_URL) {
     port: 3306,
     user: "root",
     password: process.env.DB_PASS,
-    database: "burgers_db"
+    database: "burgers_db"//name of database in mysql
   });
 }
-// Make connection.    
+// Make connection
 connection.connect(function (err) {
   if (err) {
     console.error("error connecting: " + err.stack);
