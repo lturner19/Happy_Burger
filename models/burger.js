@@ -15,7 +15,7 @@ var burger = {
     });
   },
   update: function(objColVals, condition, cb) {
-    orm.update("burgers", objColVals, condition, function(res) {//updating the state of the cat from sleepy to wake or vice versa
+    orm.update("burgers", objColVals, condition, function(res) {//updating the state of the burger
       //condition =
       cb(res);
     });

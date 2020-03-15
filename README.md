@@ -2,7 +2,7 @@
 
 ## INTRODUCTION
 
-    An application that allows the user to create a list of burgers, devour them, and keep track of which burgers they have "eaten".
+An application that allows the user to create a list of burgers, devour them, and keep track of which burgers they have "eaten".
 
 ## TABLE OF CONTENTS
 

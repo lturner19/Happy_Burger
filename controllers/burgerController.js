@@ -14,7 +14,7 @@ router.get("/burgers", function(req, res) {
 
   burger.all(function(data) {
     var hbsObject = {
-      cats: data
+      burgers: data
     };
     console.log(hbsObject);
     res.render("index", hbsObject);
@@ -25,19 +25,19 @@ router.post("/api/burgers", function(req, res) {//create new burger(expecting na
   burger.create([
     "burger_name", "devour"//columns from database
   ], [
-    req.body.name, req.body.devour//something coming from the front end/ found in public/js/cats.js (var newCat = {name: $(#ca).val().trim() sleep: $("[name = sleepy]")})
-  ], function(result) {//my asynchrouous or use the callback method
+    req.body.name, req.body.devour//something coming from the front end/ found in public/js file
+  ], function(result) {//can use asynchronous or use the callback method
     // Send back the ID of the new quote
     res.json({ id: result.insertId });//response sending to user
   });
 });
 
 router.put("/api/burgers/:id", function(req, res) {//updating 
-
+var condition = "id = "+req.params.id
   console.log("condition", condition);
-
+console.log(req.body.devour)
   burger.update({//updating a burger
-    devour: req.body.devour
+    devour: req.body.devour ===0 ? false : true 
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
