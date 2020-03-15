@@ -5,7 +5,7 @@ var express = require("express");
 
 var router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
+// Import the model (burger.js) to use its database functions.
 var burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
@@ -21,11 +21,11 @@ router.get("/", function(req, res) {
   });
 });
 
-router.post("/api/burgers", function(req, res) {//create new burger(expecting name and something from the body from the front end)
+router.post("/api/burgers", function(req, res) {//create new burger(expecting name and info from the body from the front end)
   burger.create([
     "burger_name", "devour"//columns from database
   ], [
-    req.body.name, req.body.devour//something coming from the front end/ found in public/js file
+    req.body.name, req.body.devour//info coming from the front end/ found in public/js file
   ], function(result) {//can use asynchronous or use the callback method
     // Send back the ID of the new quote
     res.json({ id: result.insertId });//response sending to user
@@ -34,10 +34,15 @@ router.post("/api/burgers", function(req, res) {//create new burger(expecting na
 
 router.put("/api/burgers/:id", function(req, res) {//updating 
 var condition = "id = "+req.params.id
+
   console.log("condition", condition);
-console.log(req.body.devour)
+
+  //console.log(req.body.devour) used to determine value of condition
+
   burger.update({//updating a burger
+    //conditional ternary operator = condition ? expression to execute if condition truthy : expression to execute if condition is falsy 
     devour: req.body.devour ===0 ? false : true 
+
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
