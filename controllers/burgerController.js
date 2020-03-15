@@ -12,7 +12,7 @@ var burger = require("../models/burger.js");
 router.get("/", function(req, res) {
   // homepage loaded (select all data from database)
 
-  burger.all(function(data) {
+  burger.selectAll(function(data) {
     var hbsObject = {
       burgers: data
     };
@@ -22,7 +22,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {//create new burger(expecting name and info from the body from the front end)
-  burger.create([
+  burger.insertOne([
     "burger_name", "devour"//columns from database
   ], [
     req.body.name, req.body.devour//info coming from the front end/ found in public/js file
@@ -39,7 +39,7 @@ var condition = "id = "+req.params.id
 
   //console.log(req.body.devour) used to determine value of condition
 
-  burger.update({//updating a burger
+  burger.updateOne({//updating a burger
     //conditional ternary operator = condition ? expression to execute if condition truthy : expression to execute if condition is falsy 
     devour: req.body.devour ===0 ? false : true 
 
