@@ -1,9 +1,15 @@
 body {
-
   background-color: #f1a56e;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, h2{
+h1 {
+  color: #f45ca2; 
+}
+
+h1,
+h2 {
   text-align: center;
 }
 
@@ -12,7 +18,7 @@ img {
   height: 150px;
   display: block;
   margin: 0 auto;
-  
+
 }
 
 li {
@@ -39,10 +45,14 @@ li {
 
 .change-state {
   padding: 5px;
- margin-left: 30px;
+  margin-left: 30px;
 }
 
-form{
+form {
   text-align: center;
 }
 
+#submit {
+  padding: 10px;
+  font-size: 18px;
+}
