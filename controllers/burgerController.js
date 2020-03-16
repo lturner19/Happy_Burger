@@ -33,15 +33,15 @@ router.post("/api/burgers", function(req, res) {//create new burger(expecting na
 });
 
 router.put("/api/burgers/:id", function(req, res) {//updating 
-var condition = "id = "+req.params.id
+var condition = "id = "+ req.params.id;
 
   console.log("condition", condition);
 
-  //console.log(req.body.devour) used to determine value of condition
+  console.log(req.body.devour) //used to determine value of condition
 
   burger.updateOne({//updating a burger
-    //conditional ternary operator = condition ? expression to execute if condition truthy : expression to execute if condition is falsy 
-    devour: req.body.devour ===0 ? false : true 
+     
+    devour: req.body.devour
 
   }, condition, function(result) {
     if (result.changedRows == 0) {
