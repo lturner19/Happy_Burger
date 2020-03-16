@@ -5,12 +5,11 @@ $(function () {
         //creating variable for devour state of burger
         var newState = $(this).attr("data-newState");
 
-        console.log(newState)
         //
         var newEatenState = {
             devour: newState
         };
-        console.log(newEatenState);
+        console.log("test1", newEatenState);
 
         //sending a put request to the backend (updating burger page with new burger user creates)
         $.ajax("/api/burgers/" + id, {
@@ -33,7 +32,8 @@ $(function () {
         var newBurger = {
            name: $("#burger").val().trim()
         };
-        console.log(newBurger);
+         
+        console.log("test2", newBurger);
 
         //sending the POST response for new burger
         $.ajax("/api/burgers", {
