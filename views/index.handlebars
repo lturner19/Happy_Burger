@@ -1,6 +1,6 @@
 <img src="../img/10610510.jpg" alt="Happy Burger image">
 
-<h1>Eat Da Burger</h1>
+<h1>EAT DA BURGER</h1>
 
 <h3>Burgers not devoured</h3>
 
@@ -25,19 +25,22 @@
   {{/each}}
 </ol>
 
-<h2>Add a Burger</h2>
+<h2>Burger Name</h2> 
 <form class="create-form">
 
   <div class="form-group">
-    <label for="burger" class="burger-name">Burger Name:</label>
-    <input type="text" id="burger" name="name">
+    <textarea type="text" id="burger" name="name" rows="5" cols = "30"></textarea>
+    <br>
+    <br>
+     <label for="burger" class="burger-name">Please add a burger you would like to devour.</label>
   </div>
+  <br>
+  <button type="submit" id="submit">Add</button>
+</form>
+
 {{!-- 
   <div class="form-group">
     <label for="eaten">Eaten?</label><br>
     <input type="radio" name="devoured" value="1" checked> Devoured!<br>
     <input type="radio" name="devoured" value="0"> Not Devoured!
   </div> --}}
-
-  <button type="submit">Add Burger</button>
-</form>
