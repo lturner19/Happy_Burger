@@ -1,41 +1,47 @@
-<img src="../img/10610510.jpg" alt="Happy Burger image">
-
 <h1>EAT DA BURGER</h1>
-
-<h3>Burgers not devoured</h3>
-
-
-<ol>
-  {{#each burgers}}
-    {{#unless devour}}
-      {{> burger-block}}
-      {{!-- removed burgers/ --}}
-    {{/unless}}
-  {{/each}}
-</ol>
-
-<h3>Devoured burgers</h3>
-
-<ol>
-  {{#each burgers}}
-    {{#if devour}}
-      {{> burger-block}} 
-      {{!-- removed burgers/ --}}
-    {{/if}}
-  {{/each}}
-</ol>
-
-<h2>Burger Name</h2> 
-<form class="create-form">
-
-  <div class="form-group">
-    <textarea type="text" id="burger" name="name" rows="5" cols = "30"></textarea>
-    <br>
-    <br>
-     <label for="burger" class="burger-name">Please add a burger you would like to devour.</label>
+<br>
+<br>
+<img src="../img/10610510.jpg" alt="Happy Burger image">
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3" id="not-devoured">
+      <h3>Burgers not devoured</h3>
+      <ol>
+        {{#each burgers}}
+        {{#unless devour}}
+        {{> burger-block}}
+        {{!-- removed burgers/ --}}
+        {{/unless}}
+        {{/each}}
+      </ol>
+    </div>
+    <div class="col-sm-3" id ="devoured">
+      <h3>Devoured Burgers</h3>
+      <ol>
+        {{#each burgers}}
+        {{#if devour}}
+        {{> burger-block}}
+        {{!-- removed burgers/ --}}
+        {{/if}}
+        {{/each}}
+      </ol>
+    </div>
   </div>
-  <br>
-  <button type="submit" id="submit">Add</button>
+</div>
+
+<br>
+<br>
+
+<form class="create-form">
+  <div class="form-group">
+    <label for="burger" class="burger-name">Burger Name</label>
+    <br>
+    <br>
+    <textarea type="text" id="burger" name="name" rows="5" cols="30"
+      placeholder="Please add a burger you would like to devour."></textarea>
+  </div>
+  <button type="submit">Add</button>
 </form>
 
 {{!-- 
