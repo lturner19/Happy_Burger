@@ -1,7 +1,26 @@
+body {
+
+  background-color: #f1a56e;
+}
+
+h1, h2{
+  text-align: center;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 0 auto;
+  
+}
+
 li {
-  padding: 5px;
+  padding: 15px;
   margin: 5px;
   background: #faebd7;
+  width: 200px;
+  height: 20px;
 }
 
 .label {
@@ -17,3 +36,13 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+.change-state {
+  padding: 5px;
+ margin-left: 30px;
+}
+
+form{
+  text-align: center;
+}
+
