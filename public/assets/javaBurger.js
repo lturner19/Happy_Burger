@@ -3,7 +3,7 @@ $(function () {
         //creating variable for burger id
         var id = $(this).data("id");
         //creating variable for devour state of burger
-        var newState = $(this).attr("data-newState");
+        var newState = !$(this).data("devour");
 
         //
         var newEatenState = {
