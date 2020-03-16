@@ -1,16 +1,32 @@
 body {
-  background-color: #f1a56e;
-  font-size: 20px;
+  background-color:#8fd0ca;
+  font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 h1 {
   color: #f45ca2; 
 }
 
-h1,
+.container {
+  margin: 0 auto;
+  width: 960px;
+  
+}
+
+#not-devoured {
+float: left;
+}
+
+#devoured{
+  float: right;
+}
+
+/* headings for burgers devoured and not */
 h2 {
-  text-align: center;
+  margin: 5px;
+  padding: 5px;
 }
 
 img {
@@ -18,25 +34,20 @@ img {
   height: 150px;
   display: block;
   margin: 0 auto;
-
 }
 
+/* burgers entered by user in a list */
 li {
-  padding: 15px;
+ padding: 5px;
   margin: 5px;
-  background: #faebd7;
-  width: 200px;
-  height: 20px;
+  display: block;
 }
 
-.label {
-  font-weight: bold;
-}
 
-.create-update-form {
+.create-form {
   padding: 5px;
   margin: 5px;
-  background: aqua;
+  display: inline-block;
 }
 
 .form-group {
@@ -48,11 +59,8 @@ li {
   margin-left: 30px;
 }
 
-form {
-  text-align: center;
+.burger-name {
+  font-weight: bold;
+  font-size: 26px;
 }
 
-#submit {
-  padding: 10px;
-  font-size: 18px;
-}
