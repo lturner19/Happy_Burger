@@ -2,6 +2,7 @@
 
 var express = require("express");
 
+//port # for local host
 var PORT = process.env.PORT || 3001;
 
 var app = express();
