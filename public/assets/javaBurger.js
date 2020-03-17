@@ -1,39 +1,42 @@
+// ``````Updating the burger from a state of not being devoured, to then being devoured
+//sending the put request to the backend to have the value changed
 $(function () {
     $(".change-state").on("click", function (event) {
         //creating variable for burger id
         var id = $(this).data("id");
         //creating variable for devour state of burger
         var newState = !$(this).data("devour");
-
-        //
         var newEatenState = {
             devour: newState
         };
+        
         console.log("test1", newEatenState);
-
-        //sending a put request to the backend (updating burger page with new burger user creates)
+        
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newEatenState
-        }).then(
-            function () {
+        }).then(function () {
+                
                 console.log("Changed burger to", newState);
                 location.reload();
             }
         );
     });
-    //information from the front end (index.handlebars)
+
+    //``````Taking user's input for a burger name when add/("submit") button is clicked`````
+    
+   // then sending a post request to the backend to update burger page with new burger
     $(".create-form").on("submit", function(event) {
         event.preventDefault();
         
-        console.log ("Submitted successfully") //used to determine if submit is working
+       // console.log ("Submitted successfully") used to determine if submit is working
 
         //creating a variable to hold the user's burger
         var newBurger = {
            name: $("#burger").val().trim()
         };
          
-        console.log("test2", newBurger);
+        //console.log("test2", newBurger); testing the value of newBurger variable
 
         //sending the POST response for new burger
         $.ajax("/api/burgers", {
