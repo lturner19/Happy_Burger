@@ -2,9 +2,12 @@
 
 <li>
 	{{burger_name}}
+	
+	{{#unless devour}}
+	{{!-- devour = attribute true --}}
 	<button class="change-state" data-id="{{id}}" data-newState="{{devour}}">Devour it!</button>
 </li>
+{{/unless}}
 
 
 
-{{!-- {{#if devour}}EATEN!{{else}}NOT EATEN!{{/if}} --}}
