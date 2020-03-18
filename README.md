@@ -57,7 +57,7 @@ A burger app that allows users to input a burger they would like to devour. Once
 
 Please click below to see the app in my portfolio, the link will redirect to Heroku.
 
-[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://secure-sands-03885.herokuapp.com/)
+[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://lturner19.github.io/professional_portfolio/)
 
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
