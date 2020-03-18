@@ -1,7 +1,7 @@
 <h1>EAT DA BURGER</h1>
 <br>
 <br>
-<img src="../img/10610510.jpg" alt="Happy Burger image">
+<img src="../img/happy_burger.jpg" alt="Happy Burger image">
 <br>
 <div class="container">
   <div class="row">
@@ -10,7 +10,7 @@
       <ol>
         {{#each burgers}}
         {{#unless devour}}
-        {{> burger-block}}
+        {{> burger-block devour = false}}
         {{!-- removed burgers/ --}}
         {{/unless}}
         {{/each}}
@@ -21,8 +21,7 @@
       <ol>
         {{#each burgers}}
         {{#if devour}}
-        {{> burger-block}}
-        {{!-- removed burgers/ --}}
+        {{> burger-block devour = true}}
         {{/if}}
         {{/each}}
       </ol>

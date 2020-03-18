@@ -1,7 +1,8 @@
-//Code below is establishing connection to mySQL database
+//```````````````Code below is establishing connection to mySQL database`````````````````
 
 // Set up MySQL connection.
 var mysql = require("mysql");
+
 //environments folder (can be used to hold password, remember to add to .gitignore)
 require('dotenv').config()
 var connection;

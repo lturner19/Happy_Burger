@@ -1,12 +1,11 @@
-//This controller file sets up the routes
+//```````This controller file sets up the routes``````````
 
+const express = require("express");
 
-var express = require("express");
-
-var router = express.Router();
+const router = express.Router();
 
 // Import the model (burger.js) to use its database functions.
-var burger = require("../models/burger.js");
+const burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
@@ -16,32 +15,33 @@ router.get("/", function(req, res) {
     var hbsObject = {
       burgers: data
     };
-    console.log(hbsObject);
+   // console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
 
-router.post("/api/burgers", function(req, res) {//create new burger(expecting name and info from the body from the front end)
+//create new burger(expecting name and info from the body from the front end)
+router.post("/api/burgers/", function(req, res) {
   burger.insertOne([
     "burger_name", "devour"//columns from database
   ], [
     req.body.name, req.body.devour//info coming from the front end/ found in public/js file
   ], function(result) {//can use asynchronous or use the callback method
-    // Send back the ID of the new quote
+    // Send back the ID of the new burger
     res.json({ id: result.insertId });//response sending to user
   });
 });
 
-router.put("/api/burgers/:id", function(req, res) {//updating 
+router.put("/api/burgers/:id", function(req, res) {//updating status of burger
 var condition = "id = "+ req.params.id;
 
-  console.log("condition", condition);
+ console.log("condition", condition);
 
   console.log(req.body.devour) //used to determine value of condition
 
   burger.updateOne({//updating a burger
      
-    devour: req.body.devour
+    devour: true
 
   }, condition, function(result) {
     if (result.changedRows == 0) {
