@@ -27,11 +27,11 @@ A burger app that allows users to input a burger they would like to devour. Once
 
 1. To use the application, install (npm install) the following dependencies:
 
-  * express: node framework
+    * express: node framework
 
-  * express-handlebars: allows server-side manipulation of HTML ("templating engine")
+    * express-handlebars: allows server-side manipulation of HTML ("templating engine")
 
-  * mysql: allows access to mySQL database
+    * mysql: allows access to mySQL database
 
 2. Users will need to install mySQL in order to create a database using the burgers_db schema and seed files.
 
