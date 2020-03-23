@@ -2,7 +2,7 @@
 
 ## INTRODUCTION
 
-As a burger enthusiast I want an app to simulate devouring burgers so that can enjoy devouring them without worrying about the calories.
+As a burger enthusiast I want an app to simulate devouring burgers so I can enjoy devouring burgers without worrying about the calories.
 
 <br>
 
@@ -18,7 +18,7 @@ As a burger enthusiast I want an app to simulate devouring burgers so that can e
 
 ## FEATURES
 
-A burger app that allows users to input a burger they would like to devour. Once the user clicks the submit button, the burger is then put into "Burgers Not Devoured" column with a "Devour It" button. When user clicks the button, the burger is then moved to the devoured column.  All of the users' choices are stored in a mySQL database.
+A burger app that allows users to input a burger they would like to devour. Once the user clicks the submit button, the burger is then put into "Burgers Not Devoured" column with a "Devour It" button. When user clicks "Devour It" button, the burger is then moved to the devoured column.  All of the users' choices are stored in a mySQL database.
 
 
 <br>
