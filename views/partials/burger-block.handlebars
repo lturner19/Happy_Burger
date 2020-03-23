@@ -7,7 +7,12 @@
 	{{!-- devour = attribute true --}}
 	<button class="change-state" data-id="{{id}}" data-newState="{{devour}}">Devour it!</button>
 	{{/unless}}
+
+	{{#if devour}}
+	<button class="delete-burger" data-id="{{this.id}}">Delete Me!</button>
+	{{/if}}
 </li>
+
 
 
 

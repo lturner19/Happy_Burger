@@ -11,18 +11,17 @@ $(function () {
             devour: newState
         };
 
-       // console.log("test1", newEatenState);
+        // console.log("test1", newEatenState);
 
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: newEatenState
         }).then(function () {
-         //   console.log("Changed burger to", newState);
+            //   console.log("Changed burger to", newState);
             location.reload();
-        }
-        );
+        });
     });
-    
+
     //``````Taking user's input for a burger name when add/("submit") button is clicked`````
 
     // then sending a post request to the backend to update burger page with new burger
@@ -47,5 +46,19 @@ $(function () {
             location.reload();
         })
     });
+    //sending request to delete a burger using id
+    $(".delete-burger").on("click", function (event) {
+        var id = $(this).data("id");
 
+        // Send the DELETE request.
+        $.ajax("/api/burgers/" + id, {
+            type: "DELETE"
+        }).then(
+            function () {
+                console.log("deleted burger", id);
+                // Reload the page to get the updated list
+                location.reload();
+            }
+        );
+    });
 });

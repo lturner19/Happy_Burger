@@ -54,9 +54,9 @@ li {
   margin-bottom: 5px;
 }
 
-.change-state {
+.change-state, .delete-burger {
   padding: 5px;
-  margin-left: 30px;
+  margin-left: 15px;
 }
 
 .burger-name {
